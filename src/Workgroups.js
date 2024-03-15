@@ -2,7 +2,7 @@ import { useState } from "react";
 import { WORKGROUPS } from "./data/mockdata";
 import { Work_Group } from "./data/models";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome,faUsers, faPhone,faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faHome,faUsers, faPhone, faCubes } from '@fortawesome/free-solid-svg-icons';
 
 export default function Workgroups() {
     const [workgroup, setWorkgroup] = useState(WORKGROUPS);

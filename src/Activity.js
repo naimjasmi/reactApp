@@ -124,7 +124,12 @@ export default function Activities({ tajuk, kandungan }) {
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="workgroupID" className="form-label">Workgroup ID</label>
-                                            <input type="text" className="form-control" id="workgroupID" defaultValue={editingActivity.workgroup_id} />
+                                            <select className="form-select" id="workgroupID" defaultValue={editingActivity.workgroup_id}>
+                                                <option value="WG001">WG001</option>
+                                                <option value="WG002">WG002</option>
+                                                <option value="WG003">WG003</option>
+                                                <option value="WG004">WG004</option>
+                                            </select>
                                         </div>
                                         <button type="submit" className="btn btn-primary">Save Changes</button>
                                     </form>
@@ -163,7 +168,12 @@ export default function Activities({ tajuk, kandungan }) {
                             </div>
                             <div className="mb-5">
                                 <label htmlFor="workgroupID" className="form-label">Workgroup ID</label>
-                                <input type="text" className="form-control" id="workgroupID" />
+                                <select className="form-select" id="workgroupID">
+                                    <option value="WG001">WG001</option>
+                                    <option value="WG002">WG002</option>
+                                    <option value="WG003">WG003</option>
+                                    <option value="WG004">WG004</option>
+                                </select>
                             </div>
                             <button type="submit" className="btn btn-primary">Add Activity</button>
                         </form>
