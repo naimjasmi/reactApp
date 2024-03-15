@@ -2,7 +2,7 @@ import { useState } from "react";
 import { WORKGROUPS } from "./data/mockdata";
 import { Work_Group } from "./data/models";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome,faUsers, faPhone,faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faHome,faUsers, faPhone,faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
 
 export default function Workgroups() {
     const [workgroup, setWorkgroup] = useState(WORKGROUPS);
@@ -63,8 +63,8 @@ export default function Workgroups() {
             <div className="topnav">
                 <a href="/"> <FontAwesomeIcon icon={faHome} /> Home</a>
                 <a className="active" href="/workgroup"> <FontAwesomeIcon icon={faUsers} /> Workgroup</a>
-                <a href="#contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
-                <a href="/activity"><FontAwesomeIcon icon={faInfo} /> Activity</a>
+                <a href="/contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
+                <a href="/activity"><FontAwesomeIcon icon={faCubes} /> Activity</a>
             </div>
             <div className="container">
                 <header style={{ padding: '12px', textAlign: 'center' }}><h1>WORKGROUPS</h1></header>

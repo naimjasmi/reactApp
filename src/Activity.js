@@ -2,9 +2,10 @@ import { useState } from "react";
 import { ACTIVITIES } from "./data/mockdata";
 import { Activity } from "./data/models";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome,faUsers, faPhone,faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faPhone, faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
+import "react-datepicker/dist/react-datepicker.css";
 
-export default function Activities({tajuk,kandungan}){
+export default function Activities({ tajuk, kandungan }) {
     const [activities, setActivities] = useState(ACTIVITIES);
     const [editingActivity, setEditingActivity] = useState(null);
     const zeroPad = (num, places) => String(num).padStart(places, '0')
@@ -22,7 +23,7 @@ export default function Activities({tajuk,kandungan}){
         );
 
         setActivities([...activities, newActivity]);
-        // reset form after submit
+        //reset form after submit
         ev.target.reset();
     }
 
@@ -52,7 +53,7 @@ export default function Activities({tajuk,kandungan}){
             activity.work_id === updatedActivity.work_id ? updatedActivity : activity
         );
 
-        // show edit confirmation popup
+        // pop up edit confirmation
         if (window.confirm(`Are you sure you want to edit activity?`)) {
             setActivities(updatedActivities);
         }
@@ -66,8 +67,8 @@ export default function Activities({tajuk,kandungan}){
             <div className="topnav">
                 <a href="/"> <FontAwesomeIcon icon={faHome} /> Home</a>
                 <a href="/workgroup"> <FontAwesomeIcon icon={faUsers} /> Workgroup</a>
-                <a href="#contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
-                <a className="active" href="/activity"><FontAwesomeIcon icon={faInfo} /> Activity</a>
+                <a href="/contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
+                <a className="active" href="/activity"><FontAwesomeIcon icon={faCubes} /> Activity</a>
             </div>
             <div className="container">
                 <header style={{ padding: '12px', textAlign: 'center' }}><h1>ACTIVITIES</h1></header>
@@ -77,7 +78,7 @@ export default function Activities({tajuk,kandungan}){
                             <div className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">Activity ID: {activity.work_id}</h5>
-                                    <h6 className="card-subtitle ">Date: {activity.date}</h6>
+                                    <p className="card-text">Date: {activity.date}</p>
                                     <p className="card-text">Weather: {activity.weather}</p>
                                     <p className="card-text">Work Type: {activity.work_type}</p>
                                     <p className="card-text">Workgroup ID: {activity.workgroup_id}</p>
@@ -109,7 +110,13 @@ export default function Activities({tajuk,kandungan}){
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="weather" className="form-label">Weather</label>
-                                            <input type="text" className="form-control" id="weather" defaultValue={editingActivity.weather} />
+                                            <select className="form-select" id="weather" defaultValue={editingActivity.weather}>
+                                                <option value="Sunny">Sunny</option>
+                                                <option value="Clear">Clear</option>
+                                                <option value="Cloudy">Cloudy</option>
+                                                <option value="Rainy">Rainy</option>
+                                                <option value="Overcast">Overcast</option>
+                                            </select>
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="workType" className="form-label">Work Type</label>
@@ -138,11 +145,17 @@ export default function Activities({tajuk,kandungan}){
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="date" className="form-label">Date</label>
-                                <input type="text" className="form-control" id="date" />
+                                <input type="date" className="form-control" id="date" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="weather" className="form-label">Weather</label>
-                                <input type="text" className="form-control" id="weather" />
+                                <select className="form-select" id="weather">
+                                    <option value="Sunny">Sunny</option>
+                                    <option value="Clear">Clear</option>
+                                    <option value="Cloudy">Cloudy</option>
+                                    <option value="Rainy">Rainy</option>
+                                    <option value="Overcast">Overcast</option>
+                                </select>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="workType" className="form-label">Work Type</label>

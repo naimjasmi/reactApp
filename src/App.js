@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faPhone, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faPhone, faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
 
-//test
 function App() {
 
   const [list, setList] = useState([]);
@@ -33,8 +32,8 @@ function App() {
       <div class="topnav">
         <a className="active" href="/"> <FontAwesomeIcon icon={faHome} /> Home</a>
         <a href="/workgroup"> <FontAwesomeIcon icon={faUsers} /> Workgroup</a>
-        <a href="#contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
-        <a href="/activity"><FontAwesomeIcon icon={faInfo} /> Activity</a>
+        <a href="/contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
+        <a href="/activity"><FontAwesomeIcon icon={faCubes} /> Activity</a>
       </div>
 
       <header className="App-header">
