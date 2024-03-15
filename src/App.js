@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faPhone, faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faPhone, faCubes } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 

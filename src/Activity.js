@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ACTIVITIES } from "./data/mockdata";
 import { Activity } from "./data/models";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faPhone, faInfo, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faPhone, faCubes } from '@fortawesome/free-solid-svg-icons';
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function Activities({ tajuk, kandungan }) {
