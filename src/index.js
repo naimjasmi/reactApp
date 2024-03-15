@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import About from './About';
+import About from './Activity';
 import Workgroups from './Workgroups';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Activities from './Activity';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,8 @@ const router = createBrowserRouter([
   }
   ,
   {
-    path: "/about",
-    element: <About></About>,
+    path: "/activity",
+    element: <Activities></Activities>,
   }
 ]);
 

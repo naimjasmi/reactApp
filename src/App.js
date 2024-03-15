@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUsers, faPhone, faInfo } from '@fortawesome/free-solid-svg-icons';
 
 //test
 function App() {
@@ -29,10 +31,10 @@ function App() {
     <div className="App">
 
       <div class="topnav">
-        <a class="active" href="/">Home</a>
-        <a href="/workgroup">workgroup</a>
-        <a href="#contact">Contact</a>
-        <a href="/about">About</a>
+        <a className="active" href="/"> <FontAwesomeIcon icon={faHome} /> Home</a>
+        <a href="/workgroup"> <FontAwesomeIcon icon={faUsers} /> Workgroup</a>
+        <a href="#contact"><FontAwesomeIcon icon={faPhone} /> Contact</a>
+        <a href="/activity"><FontAwesomeIcon icon={faInfo} /> Activity</a>
       </div>
 
       <header className="App-header">
